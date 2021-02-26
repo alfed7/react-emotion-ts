@@ -1,5 +1,5 @@
 import React from "react";
-import { css, cx } from "@emotion/css";
+import { css } from "@emotion/css";
 
 //import styled from '@emotion/styled'
 
@@ -15,12 +15,23 @@ import { css, cx } from "@emotion/css";
 //   }
 // `
 
-export interface Props {
+export interface ButtonProps {
   children: React.ReactNode;
+  /**
+   * What text color to use
+   */
   color?: string;
+  /**
+   * What background color to use
+   */
+  backgroundColor?: string;
+  /**
+   * Optional click handler
+   */
+  onClick?: () => void;
 }
 
-const Button: React.FC<Props> = ({ color, children }) => (
+export const Button: React.FC<ButtonProps> = ({ color, children }) => (
   <button
     className={css`
       padding: 1em;
