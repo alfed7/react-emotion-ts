@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "description": "A React starter project with Typescript, Emotion and WebPack.",
   "main": "build/index.js",
+  "module": "src/components/index.tsx",
   "repository": "https://github.com/alfed7/react-emotion-ts.git",
   "author": "Alexander Fedorenko",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
     "@emotion/css": "latest",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
@@ -15,10 +17,7 @@
     "react-redux": "latest",
     "react-router": "latest",
     "react-router-config": "latest",
-    "react-router-dom": "latest",
-    "redux": "latest",
-    "redux-logger": "latest",
-    "redux-thunk": "latest"
+    "react-router-dom": "latest"
   },
   "devDependencies": {
     "@babel/core": "latest",

@@ -19,7 +19,7 @@ const config: ConfigurationBuilder = (
   const isDevelopment = startArgs.mode === "development";
   console.log(isDevelopment);
   return {
-    entry: "./src/index.tsx",
+    entry: "./src/components/index.tsx",
     devtool: isDevelopment ? "eval-source-map" : false,
     module: {
       rules: [
@@ -52,7 +52,7 @@ const config: ConfigurationBuilder = (
     },
     output: {
       path: path.resolve(__dirname, "build"),
-      filename: "bundle.js",
+      filename: "index.js",
     },
     devServer: {
       contentBase: path.join(__dirname, "build"),
