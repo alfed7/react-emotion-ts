@@ -1,5 +1,6 @@
 import React from "react";
 import { css } from "@emotion/css";
+import { useTheme, Theme } from "@emotion/react";
 
 //import styled from '@emotion/styled'
 
@@ -31,20 +32,23 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = ({ color, children }) => (
-  <button
-    className={css`
-      padding: 1em;
-      background-color: hotpink;
-      font-size: 1.2em;
-      border: 0;
-      border-radius: 5%;
-      &:hover {
-        color: ${color || "#ccc"};
-      }
-    `}
-  >
-    {children}
-  </button>
-);
+export const Button: React.FC<ButtonProps> = ({ color, children }) => {
+  const theme: Theme = useTheme();
+  return (
+    <button
+      className={css`
+        padding: 1em;
+        background-color: ${theme.colors.primary};
+        font-size: 1.2em;
+        border: 0;
+        border-radius: 5%;
+        &:hover {
+          color: ${color || "#ccc"};
+        }
+      `}
+    >
+      {children}
+    </button>
+  );
+};
 export default Button;

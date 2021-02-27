@@ -1,12 +1,16 @@
 import React from "react";
+import { ThemeProvider } from "@emotion/react";
 import { Button } from "./components";
+import { theme } from "./theme";
 
 const App: React.FC = () => {
   return (
-    <div>
-      <h1>My React and TypeScript App!</h1>
-      <Button>Test</Button>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <h1>My React and TypeScript App!</h1>
+        <Button>Test</Button>
+      </div>
+    </ThemeProvider>
   );
 };
 
