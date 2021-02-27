@@ -1,9 +1,9 @@
-import React from "react";
+import { FC } from "react";
 import { ThemeProvider } from "@emotion/react";
 import { Button } from "./components";
 import { theme } from "./theme";
 
-const App: React.FC = () => {
+const App: FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <div>

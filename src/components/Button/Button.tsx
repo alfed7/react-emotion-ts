@@ -1,5 +1,5 @@
-import React from "react";
-import { css } from "@emotion/css";
+import { FC, ReactNode } from "react";
+import { css } from "@emotion/react";
 import { useTheme, Theme } from "@emotion/react";
 
 //import styled from '@emotion/styled'
@@ -17,7 +17,7 @@ import { useTheme, Theme } from "@emotion/react";
 // `
 
 export interface ButtonProps {
-  children: React.ReactNode;
+  children: ReactNode;
   /**
    * What text color to use
    */
@@ -32,11 +32,11 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = ({ color, children }) => {
+export const Button: FC<ButtonProps> = ({ color, children }) => {
   const theme: Theme = useTheme();
   return (
     <button
-      className={css`
+      css={css`
         padding: 1em;
         background-color: ${theme.colors.primary};
         font-size: 1.2em;

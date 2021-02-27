@@ -38,6 +38,7 @@
     "@types/webpack-dev-server": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
+    "@emotion/babel-plugin": "latest",
     "babel-eslint": "latest",
     "babel-loader": "latest",
     "clean-webpack-plugin": "latest",
