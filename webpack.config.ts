@@ -1,5 +1,7 @@
 import path from "path";
 import webpack from "webpack";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import ESLintPlugin from 'eslint-webpack-plugin';
 
 interface IEnvArguments {
   WEBPACK_SERVE: boolean;
@@ -47,8 +49,12 @@ const config: ConfigurationBuilder = (
       path: path.resolve(__dirname, "build"),
       filename: "bundle.js",
     },
+    plugins: [
+      new HtmlWebpackPlugin({ template: "src/assets/index.html" }),
+      new ESLintPlugin()
+    ],
     devServer: {
-      contentBase: path.join(__dirname, "build"),
+      static: path.join(__dirname, "build"),
       compress: true,
       port: 4000,
     },
